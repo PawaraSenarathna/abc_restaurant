@@ -9,6 +9,12 @@ function Resevation() {
         </div>
         <div>
           <form className="py-3 text-white">
+          <div class="mb-2 w-50 me-5">
+                <label class="form-label w-100 text-start ps-3" for="pax">
+                  Name
+                </label>
+                <input type="text" class="form-control" id="pax" />
+              </div>
             <div className="d-flex px-5">
               <div class="mb-3 w-50 me-5">
                 <label for="branch" class="form-label w-100 text-start ps-2">
@@ -37,7 +43,7 @@ function Resevation() {
               </div>
               <div class="mb-3 w-50">
                 <label class="form-label w-100 text-start ps-2" for="phone">
-                  Phone
+                  Contact Number
                 </label>
                 <input type="text" class="form-control" id="phone" />
               </div>
