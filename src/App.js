@@ -1,16 +1,22 @@
 import './App.css';
 // import HomePage from './Pages/HomePage';
-import Login from './Pages/Login';
+// import Login from './Pages/Login';
 // import Register from './Pages/Register';
 // import Resevation from './Pages/Resevation';
+// import Staff from './Pages/Staff';
+// import OnlineOrder from './Pages/OnlineOrder';
+import CustomerFeedback from './Pages/CustomerFeedback';
 
 function App() {
   return (
-    <div className="App">
-      {/* <HomePage/> */}
-       <Login/>
+      <div className="App">
+       {/* <HomePage/>  */}
+       {/* <Login/> */}
        {/* <Resevation/> */}
-       {/* <Register/> */}
+      {/* //  <Register/> */}
+      {/* //  <Staff/> */}
+      {/* <OnlineOrder/> */}
+      <CustomerFeedback/>
     </div>
   );
 }

@@ -4,6 +4,9 @@ import Menu from "./Menu";
 import Resevation from "./Resevation";
 import Contact from "./Contact";
 
+
+
+
 function HomePage() {
   return (
     <div id="home" className="container-fluid border p-0 m-0">
@@ -178,9 +181,12 @@ function HomePage() {
       <div id="reservation" className="">
         <Resevation/>
       </div>
+
       <div id="contact">
         <Contact/>
       </div>
+      
+      
     </div>
   );
 }
