@@ -5,7 +5,8 @@ import './App.css';
 // import Resevation from './Pages/Resevation';
 // import Staff from './Pages/Staff';
 // import OnlineOrder from './Pages/OnlineOrder';
-import CustomerFeedback from './Pages/CustomerFeedback';
+// import CustomerFeedback from './Pages/CustomerFeedback';
+import Payment from './Pages/Payment';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
       {/* //  <Register/> */}
       {/* //  <Staff/> */}
       {/* <OnlineOrder/> */}
-      <CustomerFeedback/>
+      {/* <CustomerFeedback/> */}
+      <Payment/>
     </div>
   );
 }
