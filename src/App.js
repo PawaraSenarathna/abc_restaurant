@@ -1,4 +1,5 @@
 import './App.css';
+// import AdminPage from './Pages/AdminPage';
 // import HomePage from './Pages/HomePage';
 // import Login from './Pages/Login';
 // import Register from './Pages/Register';
@@ -6,7 +7,10 @@ import './App.css';
 // import Staff from './Pages/Staff';
 // import OnlineOrder from './Pages/OnlineOrder';
 // import CustomerFeedback from './Pages/CustomerFeedback';
-import Payment from './Pages/Payment';
+// import Payment from './Pages/Payment';
+// import EditMenu from './Pages/EditMenu.Js';
+import Report from './Pages/Report';
+
 
 function App() {
   return (
@@ -18,7 +22,10 @@ function App() {
       {/* //  <Staff/> */}
       {/* <OnlineOrder/> */}
       {/* <CustomerFeedback/> */}
-      <Payment/>
+      {/* <Payment/> */}
+      {/* <EditMenu/> */}
+      {/* <AdminPage/> */}
+      <Report/>
     </div>
   );
 }

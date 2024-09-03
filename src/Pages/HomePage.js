@@ -3,6 +3,7 @@ import Navigation from "./Navigation";
 import Menu from "./Menu";
 import Resevation from "./Resevation";
 import Contact from "./Contact";
+import EditMenu from "./EditMenu.Js";
 
 
 
@@ -185,6 +186,7 @@ function HomePage() {
       <div id="contact">
         <Contact/>
       </div>
+      
       
       
     </div>
