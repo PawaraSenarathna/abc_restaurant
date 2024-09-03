@@ -1,40 +1,40 @@
 import React, { useState, useEffect } from 'react';
 
-// Initial menu items
+
 const initialMenuItems = [
   { id: 1, name: 'Chess Burger', price: 850, description: 'Juicy chess burger' },
 ];
 
-function Admin() {
-  // State for menu items
+function AdminMenu() {
+  
   const [menuItems, setMenuItems] = useState(initialMenuItems);
-  // State for the selected menu item for editing
+ 
   const [selectedItemIndex, setSelectedItemIndex] = useState(0);
-  // State for current menu item being edited or added
+  
   const [currentItem, setCurrentItem] = useState({
     id: 0,
     name: '',
     price: '',
     description: ''
   });
-  // State for the new menu item being added
+  
   const [newMenuItem, setNewMenuItem] = useState({
     name: '',
     price: "",
     description: ''
   });
 
-  // Get the currently selected item
+  
   const selectedItem = menuItems[selectedItemIndex];
 
-  // Effect to update current item based on selection
+  
   useEffect(() => {
     if (selectedItem) {
       setCurrentItem(selectedItem);
     }
   }, [selectedItem]);
 
-  // Function to handle adding a new menu item
+  
   const handleAddMenuItem = (e) => {
     e.preventDefault();
     if (newMenuItem.name && newMenuItem.price && newMenuItem.description) {
@@ -47,11 +47,11 @@ function Admin() {
     }
   };
 
-  // Function to handle removing a menu item
+
   const handleRemoveMenuItem = (id) => {
     const updatedMenuItems = menuItems.filter((item) => item.id !== id);
     setMenuItems(updatedMenuItems);
-    // Reset selection if necessary
+   
     setSelectedItemIndex(0);
   };
 
@@ -89,8 +89,8 @@ function Admin() {
         </div>
         <div className="mb-4">
           <label className="block text-lg font-bold mb-2" htmlFor="price">
-            Price
-          </label>
+            Price ,
+          </label>s
           <input
             className="block w-full p-2 pl-10 text-lg border border-gray-400 rounded"
             type="number"
@@ -121,4 +121,4 @@ function Admin() {
   );
 }
 
-export default EditMenu;
+export default AdminMenu;
