@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Report() {
+function AdminReport() {
 
   const [newReport, setNewReport] = useState({
     title: '',
@@ -116,4 +116,4 @@ function Report() {
   );
 }
 
-export default Report;
+export default AdminReport;

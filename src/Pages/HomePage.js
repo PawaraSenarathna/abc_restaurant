@@ -4,6 +4,8 @@ import Menu from "./Menu";
 import Resevation from "./Resevation";
 import Contact from "./Contact";
 import EditMenu from "./EditMenu.Js";
+import OnlineOrder from "./OnlineOrder"
+
 
 
 
@@ -185,6 +187,10 @@ function HomePage() {
 
       <div id="contact">
         <Contact/>
+      </div>
+
+      <div id="contact">
+        <OnlineOrder/>
       </div>
       
       
