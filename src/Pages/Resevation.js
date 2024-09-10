@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import axios from "axios";
-import { AppContext } from "../Context/Context";
+import { AppContext } from "../Context/AppContext";
 
 function Reservation() {
   const { user } = useContext(AppContext);

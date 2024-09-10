@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
-import { AppContext } from "../Context/Context";
+import { AppContext } from "../Context/AppContext";
 
 axios.defaults.baseURL = "http://localhost:3000";
 

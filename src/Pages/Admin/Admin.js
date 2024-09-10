@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import Contact from "../Contact";
-import { AppContext } from "../../Context/Context";
+import { AppContext } from "../../Context/AppContext";
 import { useNavigate, Link } from "react-router-dom";
 
 axios.defaults.baseURL = "http://localhost:5000";

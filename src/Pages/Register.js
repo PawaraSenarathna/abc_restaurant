@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Navigation from "../component/Navigation";
+
 import axios from "axios";
 
 axios.defaults.baseURL = "http://localhost:5000";

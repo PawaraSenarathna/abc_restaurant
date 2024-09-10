@@ -1,8 +1,8 @@
 import './App.css';
-import Admin from './Pages/Admin/Admin';
+
 import AdminMenu from './Pages/Admin/AdminMenu';
 import UpdateUser from './Pages/Admin/UpdateUser';
-import AdminReport from './Pages/Admin/AdminReport';
+
 import Gallery from './Pages/Gallery';
 import HomePage from './Pages/HomePage';
 import Login from './Pages/Login';
@@ -14,9 +14,17 @@ import CustomerFeedback from './Pages/CustomerFeedback';
 import Payment from './Pages/Payment';
 import EditMenu from './Pages/EditMenu.Js';
 import Report from './Pages/AdminReport';
-import AdminPage from './Pages/Admin/AdminPage';
+
 import Navigation from './Pages/Navigation';
 import Contact from './Pages/Contact';
+import AdminReport from './Pages/AdminReport';
+import AdminPage from './Pages/Admin/Admin';
+
+
+
+
+
+
 
 
 
