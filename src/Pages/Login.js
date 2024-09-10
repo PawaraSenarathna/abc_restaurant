@@ -32,7 +32,7 @@ function Login() {
       setPassword("");
       setUserType("");
       
-      alert(`Customer login successful`);
+      alert(`Staff Member login successful`);
       
       // navigate users
       const routes = {

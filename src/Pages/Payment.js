@@ -8,7 +8,7 @@ function Payment() {
           <div className="h-90 d-flex justify-content-center align-items-center">
             <form className="border-0 rounded-3 bg-dark bg-opacity-25 py-5 w-50 d-flex flex-column align-items-center text-white">
               <div className="mb-4">
-                <h1 className="text-white">Payment</h1>
+                <h1 className="text-black">Payment</h1>
               </div>
               <div className="mb-3 w-50">
                 <label className="form-label w-100 text-start ps-2" htmlFor="totalamount">

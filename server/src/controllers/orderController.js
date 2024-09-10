@@ -37,3 +37,16 @@ export const createNewOrder = async (req, res) => {
     res.status(400).json({ message: error.message });
   }
 };
+
+export const deleteOrders = async (req,res) =>{
+  const rsvId = req.query.id;
+  try {
+    const response = await Order.findOneAndDelete({ id: rsvId });
+    if (!response) {
+      return res.status(404).send("Order not found");
+    }
+    res.json(`Order ${rsvId} deleted.`);
+  } catch (error) {
+    res.status(400).send(error.message);
+  }
+}
