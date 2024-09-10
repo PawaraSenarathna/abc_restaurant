@@ -2,9 +2,10 @@ import React from "react";
 import Navigation from "./Navigation";
 import Menu from "./Menu";
 import Resevation from "./Resevation";
-import Contact from "./Contact";
+import ContactPage from "./ContactPage";
 import EditMenu from "./EditMenu.Js";
 import OnlineOrder from "./OnlineOrder"
+import { Link } from "react-router-dom";
 
 
 
@@ -31,12 +32,16 @@ function HomePage() {
             </div>
             <div className="d-flex w-50 justify-content-center mt-5">
               <div className="w-40 me-5">
+              <Link to={'/login'}>
                 <button className="btn btn-light w-100 py-2">Login</button>
+                </Link>
               </div>
               <div className="w-40">
+                <Link to={'/register'}>
                 <button className="btn btn-outline-warning w-100 py-2">
                   Register
                 </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -185,11 +190,11 @@ function HomePage() {
         <Resevation/>
       </div>
 
-      <div id="contact">
-        <Contact/>
+      <div id="contactpage">
+        <ContactPage/>
       </div>
 
-      <div id="contact">
+      <div id="OnlineOrder">
         <OnlineOrder/>
       </div>
       

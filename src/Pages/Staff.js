@@ -1,8 +1,8 @@
 import React, { useContext, useState, useEffect } from "react";
-import { AppContext } from "../../context/AppContext";
+import { AppContext } from "../Context/AppContext";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import Contact from "../Contact";
+import Contact from "./ContactPage";
 
 function Staff() {
   const { user, setUser } = useContext(AppContext);
@@ -37,7 +37,7 @@ function Staff() {
       <div id="staff-header">
         <div className="px-5 py-2 d-flex justify-content-between bg-dark bg-opacity-25">
           <div>
-            <img src="assets/Loogo1.png" alt="website-logo" className="w-20" />
+            <img src="Images/Logo1.png" alt="website-logo" className="w-15" />
           </div>
           <div className="d-flex align-items-center">
             <div className="me-3">{user}</div>
@@ -55,7 +55,9 @@ function Staff() {
           className="py-4 bg-dark bg-opacity-75 text-light"
         >
           <div>
-            <h1 className="mb-3">Reservation</h1>
+            <h1 className="mb-3">
+              Staff Page
+              Reservation</h1>
             <div className="h-100">
               <table className="w-75 mt-2 mx-auto table table-light table-striped text-dark">
                 <thead>

@@ -13,27 +13,31 @@ function Reservation() {
   const handleReservation = async (e) => {
     e.preventDefault();
 
-    const newReservation = {
-      user_id: user,
-      branch: branch,
-      time: time,
-      pax: pax,
-      phone: phone,
-    };
+    if(Object.keys(user).length !== 0){
+      const newReservation = {
+        user_id: user,
+        branch: branch,
+        time: time,
+        pax: pax,
+        phone: phone,
+      };
 
-    try {
-      const response = await axios.post("/reservations", newReservation);
-      // reset form
-      setBranch("");
-      setTime("");
-      setPax("");
-      setPhone("");
-      alert(response.data.message);
-    } catch (error) {
-      console.error("Request failed: ", error.response?.data || error.message);
-      alert(`Request failed: ${error.response.data.message}`);
+      try {
+        const response = await axios.post("/reservations", newReservation);
+        // reset form
+        setBranch("");
+        setTime("");
+        setPax("");
+        setPhone("");
+        alert(response.data.message);
+      } catch (error) {
+        console.error("Request failed: ", error.response?.data || error.message);
+        alert(`Request failed: ${error.response.data.message}`);
+      }
+    };
+    
     }
-  };
+
 
   return (
     <div id="reservation" className="mt-2 py-4 bg-dark bg-opacity-50 text-light">

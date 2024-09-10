@@ -1,50 +1,37 @@
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-// import AdminMenu from './Pages/Admin/AdminMenu';
-// import UpdateUser from './Pages/Admin/UpdateUser';
-
-// import Gallery from './Pages/Gallery';
 import HomePage from './Pages/HomePage';
-// import Login from './Pages/Login';
-// import Register from './Pages/Register';
-// import Resevation from './Pages/Resevation';
-// import Staff from './Pages/Staff';
-// import OnlineOrder from './Pages/OnlineOrder';
-// import CustomerFeedback from './Pages/CustomerFeedback';
-// import Payment from './Pages/Payment';
-// import EditMenu from './Pages/EditMenu.Js';
-// import Report from './Pages/AdminReport';
-
-// import Navigation from './Pages/Navigation';
-// import Contact from './Pages/Contact';
-// import AdminReport from './Pages/AdminReport';
-// import AdminPage from './Pages/Admin/Admin';
-
-
-
-
-
-
-
+import Login from './Pages/Login';
+import Register from './Pages/Register';
+import Staff from './Pages/Staff';
+import OnlineOrder from './Pages/OnlineOrder';
+import CustomerFeedback from './Pages/CustomerFeedback';
+import Payment from './Pages/Payment';
+import Admin from "./Pages/Admin/Admin";
+import UpdateUser from "./Pages/Admin/UpdateUser";
+import MenuItem from "./Pages/Admin/MenuItem";
 
 
 function App() {
   return (
+    <Router>
       <div className="App">
-       <HomePage/> 
-       {/* <Login/> */}
-       {/* <Resevation/> */}
-      {/* //  <Register/> */}
-      {/* //  <Staff/> */}
-      {/* <OnlineOrder/> */}
-      {/* <CustomerFeedback/> */}
-      {/* <Payment/> */}
-      {/* <EditMenu/> */}
-      {/* <AdminPage/> */}
-      {/* <Report/> */}
-      {/* <Contact/> */}
-      <Navigation/>
-    </div>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/onlineorder" element={<OnlineOrder />} />
+          <Route path="/payment" element={<Payment />} />
+          <Route path="/Feedback" element={<CustomerFeedback />} />
+          <Route path="/admin" element={<Admin />}/>
+          <Route path="/admin/update-user/:id" element={<UpdateUser />} />
+          <Route path="/admin/add-item" element={<MenuItem />} />
+          <Route path="/admin/menu-item/:id" element={<MenuItem />} />
+          <Route path="/staff" element={<Staff />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

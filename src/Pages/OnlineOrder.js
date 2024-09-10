@@ -88,20 +88,22 @@ function OnlineOrder() {
       return; // Exit the function if no items
     }
 
-    const newOrder = {
-      user_id: user,
-      items: itemsList,
-      total: totalPrice,
-    };
-
-    try {
-      const response = await axios.post("/orders", newOrder);
-      // reset form
-      setOrder([]);
-      alert(response.data.message);
-    } catch (error) {
-      console.error("Request failed: ", error.response?.data || error.message);
-      alert(`Request failed: ${error.response.data.message}`);
+    if (Object.keys(user).length === 0) {
+      const newOrder = {
+        user_id: user,
+        items: itemsList,
+        total: totalPrice,
+      };
+  
+      try {
+        const response = await axios.post("/orders", newOrder);
+        // reset form
+        setOrder([]);
+        alert(response.data.message);
+      } catch (error) {
+        console.error("Request failed: ", error.response?.data || error.message);
+        alert(`Request failed: ${error.response.data.message}`);
+      }
     }
   };
 

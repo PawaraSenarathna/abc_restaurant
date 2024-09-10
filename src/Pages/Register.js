@@ -45,7 +45,7 @@ function Register() {
       <div className="vh-100 bg-dark bg-opacity-50">
         {/* Navigation */}
         <div>
-          <Navigation />
+          {/* <Navigation /> */}
         </div>
 
         {/* Register */}

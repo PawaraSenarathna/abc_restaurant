@@ -48,6 +48,8 @@ export const checkUser = async (req, res) => {
     return res.status(400).json({ message: "Request parameters missing" });
   }
 
+  console.log(`${username} , ${password} , ${user_type}`)
+
   try {
     const findUser = await User.findOne({
       email: username,

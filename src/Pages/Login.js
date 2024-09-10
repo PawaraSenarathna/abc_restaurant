@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, } from "react-router-dom";
 
 import axios from "axios";
 import { AppContext } from "../Context/AppContext";
 
-axios.defaults.baseURL = "http://localhost:5000";
+axios.defaults.baseURL = "http://localhost:3500";
 
 function Login() {
   const { setUser } = useContext(AppContext);
@@ -25,13 +25,14 @@ function Login() {
 
     try {
       const response = await axios.post("/users/login", checkUser);
+      console.log(response)
       setUser(response.data.user_id);
       // clear form input data
       setUsername("");
       setPassword("");
       setUserType("");
       
-      alert(`User: ${response.data.email} login successful`);
+      alert(`Customer login successful`);
       
       // navigate users
       const routes = {
@@ -59,7 +60,7 @@ function Login() {
       <div class="vh-100 bg-dark bg-opacity-50">
         {/* Navigation */}
         <div>
-          <Navigation />
+          {/* <Navigation /> */}
         </div>
 
         {/* Login */}
@@ -124,7 +125,7 @@ function Login() {
                 Submit
               </button>
               <div className="mt-3">
-                New user? Register <Link to="/signup">here</Link>
+                New user? Register <Link to="/register">here</Link>
               </div>
             </form>
           </div>

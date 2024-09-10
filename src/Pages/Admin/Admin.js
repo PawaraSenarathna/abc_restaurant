@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
-import Contact from "../Contact";
+import Contact from "../ContactPage";
 import { AppContext } from "../../Context/AppContext";
 import { useNavigate, Link } from "react-router-dom";
 
-axios.defaults.baseURL = "http://localhost:5000";
+axios.defaults.baseURL = "http://localhost:3500";
 
 function Admin() {
   const { user, setUser } = useContext(AppContext);
@@ -23,6 +23,7 @@ function Admin() {
 
   const getUsers = async () => {
     const response = await axios.get("/users");
+    console.log(response);
     setUsers(response.data);
   };
 
@@ -73,7 +74,7 @@ function Admin() {
       <div id="admin-header">
         <div className="px-5 py-2 d-flex justify-content-between bg-dark bg-opacity-25">
           <div>
-            <img src="assets/Loogo1.png" alt="website-logo" className="w-20" />
+            <img src="Images/Logo1.png" alt="website-logo" className="w-15" />
           </div>
           <div className="d-flex align-items-center">
             <div className="me-3">{user}</div>
@@ -88,7 +89,7 @@ function Admin() {
 
       <div id="user-management">
         <div className="user-mng pb-4 pt-3 bg-dark bg-opacity-10">
-          <h1>Users</h1>
+          <h1>Admin</h1>
           <div className="user-mng-table h-100">
             <table className="w-75 mt-2 mx-auto table table-dark table-striped">
               <thead>
@@ -102,7 +103,7 @@ function Admin() {
                 </tr>
               </thead>
               <tbody>
-                {users.map((user, index) => (
+                {users && users.map((user, index) => (
                   <tr key={index}>
                     <td>{user.id}</td>
                     <td>{user.user_name}</td>
