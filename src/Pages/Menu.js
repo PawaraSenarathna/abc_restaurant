@@ -18,7 +18,7 @@ function Menu() {
             </tr>
             <tr>
               <td>Mixed Fruit Juice</td>
-              <td>110</td>
+              <td>1100</td>
             </tr>
             <tr>
               <td>Mango Juice</td>
