@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import { AppContext } from "../Context/AppContext";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+
 import Contact from "./ContactPage";
 
 function Staff() {
@@ -79,8 +80,8 @@ function Staff() {
         >
           <div>
             <h1 className="mb-3">
-              Staff Page
-              Reservation</h1>
+              
+              All Reservation</h1>
             <div className="h-100">
               <table className="w-75 mt-2 mx-auto table table-light table-striped text-dark">
                 <thead>

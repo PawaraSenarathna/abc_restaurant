@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import axios from "axios";
+
 import { AppContext } from "../Context/AppContext";
 
 function Reservation() {
@@ -12,18 +13,16 @@ function Reservation() {
 
   const handleReservation = async (e) => {
     e.preventDefault();
-
-    if(Object.keys(user).length !== 0){
-      const newReservation = {
-        user_id: user,
-        branch: branch,
-        time: time,
-        pax: pax,
-        phone: phone,
-      };
-
       try {
+        const newReservation = {
+          user_id: "USR455864",
+          branch: branch,
+          time: time,
+          pax: pax,
+          phone: phone,
+        };
         const response = await axios.post("/reservations", newReservation);
+        
         // reset form
         setBranch("");
         setTime("");
@@ -34,7 +33,6 @@ function Reservation() {
         console.error("Request failed: ", error.response?.data || error.message);
         alert(`Request failed: ${error.response.data.message}`);
       }
-    };
     
     }
 

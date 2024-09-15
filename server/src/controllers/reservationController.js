@@ -26,14 +26,6 @@ export const createNewReservation = async (req, res) => {
   // create auto generated user Id
   const userId = `RSV${Math.floor(100000 + Math.random() * 900000)}`;
   try {
-    // Check if user exists
-    const user = await User.findOne({ id: req.body.user_id });
-    if (!user) {
-      return res
-        .status(404)
-        .json({ message: "User not found. Please login to make reserversations." });
-    }
-
     // Create new reservation
     const reservation = new Reservation({
       id: userId,

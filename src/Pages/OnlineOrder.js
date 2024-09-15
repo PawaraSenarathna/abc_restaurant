@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { AppContext } from "../Context/AppContext";
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
 axios.defaults.baseURL = "http://localhost:3000";
 
 function OnlineOrder() {
+  const navigate = useNavigate();
   const { user } = useContext(AppContext);
 
   const [menu, setMenu] = useState([]);
@@ -22,7 +24,7 @@ function OnlineOrder() {
   // fetch menu items from db
   const getMenuItems = async () => {
     try {
-      const response = await axios.get("/menus");
+      const response = await axios.get("/menus/");
       return setMenu(response.data);
     } catch (error) {
       console.error("No menu items", error.response?.data || error.message);
@@ -78,6 +80,7 @@ function OnlineOrder() {
 
   // save new order to db
   const handleOnlineOrder = async () => {
+    
     const itemsList = order.map((item) => ({
       menu_id: item.id,
       quantity: item.quantity,
@@ -99,7 +102,8 @@ function OnlineOrder() {
         const response = await axios.post("/orders", newOrder);
         // reset form
         setOrder([]);
-        alert(response.data.message);
+        navigate('/payment', { state: { total: totalPrice } });
+
       } catch (error) {
         console.error("Request failed: ", error.response?.data || error.message);
         alert(`Request failed: ${error.response.data.message}`);
@@ -123,6 +127,8 @@ function OnlineOrder() {
                       src={item.photo_url}
                       alt="card-image"
                       className="w-100 object-fit-cover rounded-top"
+                      height={225}
+                      width={225}
                     />
                   </div>
                   <div className="d-flex justify-content-between rounded-bottom">

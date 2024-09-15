@@ -23,7 +23,6 @@ function Admin() {
 
   const getUsers = async () => {
     const response = await axios.get("/users");
-    console.log(response);
     setUsers(response.data);
   };
 
@@ -41,6 +40,8 @@ function Admin() {
     const response = await axios.get("/menus");
     setMenus(response.data);
   };
+
+  
 
   const handleLogout = () => {
     setUser("");
@@ -159,7 +160,6 @@ function Admin() {
                       <td>{reservation.time}</td>
                       <td>{reservation.pax}</td>
                       <td>
-                        <button className="me-2 btn btn-success">Edit</button>
                         <button className="btn btn-danger">Delete</button>
                       </td>
                     </tr>
@@ -191,7 +191,6 @@ function Admin() {
                       <td>{order.menu_items.length}</td>
                       <td>Rs. {order.total}</td>
                       <td>
-                        <button className="me-2 btn btn-success">Edit</button>
                         <button className="btn btn-danger">Delete</button>
                       </td>
                     </tr>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Navigation() {
   return (
@@ -46,6 +47,9 @@ function Navigation() {
                 <a class="nav-link" href="#reservation">
                   Make a Reservation
                 </a>
+              </li>
+              <li class="nav-item">
+              <Link className="nav-link" to={'/feedback'}>Add Review</Link>
               </li>
             </ul>
           </div>

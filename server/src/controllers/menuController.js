@@ -3,6 +3,7 @@ import Menu from "../models/Menu.js";
 // fetch all menu items
 export const getAllItems = async (req, res) => {
   const items = await Menu.find();
+  console.log(items)
   if (!items) {
     return res.status(204).json({ message: "No users found" });
   }

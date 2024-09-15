@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Link, useNavigate, } from "react-router-dom";
-
 import axios from "axios";
+
 import { AppContext } from "../Context/AppContext";
 
 axios.defaults.baseURL = "http://localhost:3500";
@@ -116,7 +116,7 @@ function Login() {
                   onChange={(e) => setUserType(e.target.value)}
                 >
                   <option selected>Select type</option>
-                  <option value="Customer">Customer</option>
+                
                   <option value="Staff">Staff</option>
                   <option value="Admin">Admin</option>
                 </select>

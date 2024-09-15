@@ -1,14 +1,10 @@
 import React from "react";
 import Navigation from "./Navigation";
-import Menu from "./Menu";
 import Resevation from "./Resevation";
 import ContactPage from "./ContactPage";
 import EditMenu from "./EditMenu.Js";
 import OnlineOrder from "./OnlineOrder"
 import { Link } from "react-router-dom";
-
-
-
 
 
 function HomePage() {
@@ -181,23 +177,18 @@ function HomePage() {
         </div>
       </div>
 
-      {/* Menu */}
-      <div id="menu">
-        <Menu/>
-      </div>
-
       <div id="reservation" className="">
         <Resevation/>
       </div>
 
-      <div id="contactpage">
-        <ContactPage/>
-      </div>
 
       <div id="OnlineOrder">
         <OnlineOrder/>
       </div>
       
+      <div id="contactpage">
+        <ContactPage/>
+      </div>
       
       
     </div>
